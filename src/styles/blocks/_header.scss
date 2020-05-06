@@ -1,0 +1,121 @@
+.header{
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  max-height: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .header-content{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+    .header_nav-bar{
+        display: flex;
+        max-width: 65%;
+        width: 100%;
+        justify-content: space-between;
+
+        li{
+
+            &:hover{
+
+                a{
+                    color: #c7b299;
+                }                
+            }
+        }
+    }
+
+    .header_nav-tools{      
+        display: flex;  
+
+        a{
+            margin-right: 30px;
+
+            .header-icon{
+                width: 1.5em;
+                height: 22px;
+                
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }    
+        .nav-tools__search {
+            display: flex;
+            align-items: center;
+            position: relative;         
+            transition: opacity .3s ease;
+            width: 20px;
+      
+            &:after {
+                content: "";
+                width: 17px;
+                height: 17px;
+                border: #ffffff 1px solid;
+                border-radius: 50%;
+                transition: all 0.2s ease;
+            }
+      
+            &:before {
+                content: "";
+                height: 6px;
+                width: 1px;
+                background-color: #ffffff;
+                transform: rotate(-45deg);
+                position: absolute;
+                bottom: 0px;
+                right: 4px;
+                border-radius: 2px;
+                opacity: 1;
+                transition: all 0.2s ease;
+            }
+      
+            &:hover {
+                cursor: pointer;       
+            }
+      
+            &.nav-tools-close {
+
+                &:after {
+                    border: none;
+                    background-color: #ffffff;
+                    opacity: 1;
+                    height: 22px;
+                    width: 1px;
+                    transform: rotate(45deg);
+                    transition: all 0.2s ease;
+                    border-radius: 0;
+                    position: absolute;
+                    top: 0px;
+                    left: 15px;
+                }
+                &:before {
+                    height: 22px;
+                    bottom: -1px;
+                    transition: all 0.2s ease;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+         }
+      }
+   }
+} 
+
+.logo{
+    display: flex;
+    align-items: center;        
+  
+    span{
+      font-family: 'Raleway', sans-serif;
+      font-size: 34px;
+    }
+}
