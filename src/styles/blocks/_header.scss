@@ -114,6 +114,7 @@
         justify-content: space-between;                           
         position: absolute;
         top: -100%; 
+        overflow: hidden;
 
         li{
             margin: 15px 0;
@@ -150,6 +151,7 @@
         @media (min-width:$desktop) {        
             display: flex;  
             position: initial;
+            overflow: initial;
         }
     }
 
@@ -162,6 +164,7 @@
             .header-icon{
                 width: 1.5em;
                 height: 22px;                
+                fill: $white;              
             }
 
             &:hover{
@@ -214,12 +217,12 @@
                     transition: all 0.2s ease;
                     border-radius: 0;
                     position: absolute;
-                    top: 0px;
+                    top: 2px;
                     left: 15px;
                 }
                 &:before {
                     height: 22px;
-                    bottom: -1px;
+                    bottom: 1px;
                     transition: all 0.2s ease;
                 }
                 

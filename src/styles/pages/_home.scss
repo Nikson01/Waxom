@@ -43,8 +43,12 @@
 
             button {
                 position: absolute;
-                right: 0;
-                bottom: 44%;
+                right: 0;      
+                
+                .svg{
+                    height: 20px;
+                    width: 20px;                    
+                }
 
                 &:hover {
                     cursor: pointer;
@@ -108,23 +112,17 @@
 
                     .svg{
                         height: 70px;
-                        width: 70px;
-
-                        path{
-                            fill: #a2a19f;
-                            transition: fill 0.3s ease;
-                        }
+                        width: 70px;                      
+                        fill: #a2a19f;
+                        transition: fill 0.3s ease;                        
                     }
 
                     &:hover{
                         cursor: pointer;   
                         
                         .svg{
-
-                            path{
-                                fill: #d3c1ad;
-                                transition: fill 0.3s ease;
-                            }
+                            fill: #d3c1ad;
+                            transition: fill 0.3s ease;                            
                         }
                     }
 
@@ -148,22 +146,16 @@
                     .svg{
                         height: 70px;
                         width: 70px;
-
-                        path{
-                            fill: #a2a19f;
-                            transition: fill 0.3s ease;
-                        }
+                        fill: #a2a19f;
+                        transition: fill 0.3s ease;                        
                     }
 
                     &:hover{
                         cursor: pointer;
 
-                        .svg{
-
-                            path{
-                                fill: #d3c1ad;
-                                transition: fill 0.3s ease;
-                            }
+                        .svg{                          
+                            fill: #d3c1ad;
+                            transition: fill 0.3s ease;                            
                         }
                     }      
                     @media (min-width: 375px) and (max-width:$desktop) {
@@ -186,6 +178,7 @@
                 margin: 0 auto;
                 color: $white;
                 text-align: center;
+                padding: 0 15px;
 
                 span{
                     font-family: 'Raleway', sans-serif;
@@ -242,11 +235,8 @@
             .features-svg{
                 height: 50px;
                 width: 50px;  
-                
-                path{
-                    fill: #555555;
-                    transition: fill 0.3s ease;
-                }
+                fill: #555555;   
+                transition: fill 0.3s ease;                    
             }
 
             h4{
@@ -278,11 +268,8 @@
             &:hover{
 
                 .features-svg{
-
-                    path{
-                        fill: $main-color;
-                        transition: fill 0.3s ease;
-                    }
+                    fill: $main-color;
+                    transition: fill 0.3s ease;
                 }
 
                 h4{
@@ -509,21 +496,14 @@
                     a{
 
                         .svg{
-
-                            path{
-
-                                fill: #ffffff;
-                            }
+                            fill: #ffffff;
                         }
 
                         &:first-child{
                             margin-right: 30px;
 
-                            .svg{
-
-                                path{
-                                    fill: #c7b299;
-                                }
+                            .svg{  
+                                fill: #c7b299;
                             }
                         }
                     }
@@ -602,10 +582,8 @@
                 transition: background-color 0.3s ease;
                 .svg{
                     height: 70px;
-                    width: 70px;
-                    path{
-                        fill: $white;
-                    }
+                    width: 70px;                   
+                    fill: $white;                   
                 }
 
                 &:hover{
@@ -734,11 +712,8 @@
                 .svg{
                     width: 45px;
                     height: 45px;
-                    margin-bottom: 15px;
-
-                    path{
-                        fill: $main-color;
-                    }
+                    margin-bottom: 15px;                 
+                    fill: $main-color;                    
                 }
 
                 span{
@@ -774,7 +749,7 @@
                     margin-bottom: 0;
                 }
             }
-            @media (min-width:$desktop) {
+            @media (min-width: 1025px) {
                 justify-content: space-between;
             }
         }
@@ -808,19 +783,13 @@
                 cursor: pointer;
 
                 .svg{
-
-                    path{
-                        fill: #d4d4d4;
-                    }
+                    fill: #d4d4d4;
                 }
 
                 &:hover{
                     .svg{                        
-
-                        path{
                             fill: #cab79f;
                             transition: fill 0.3s ease;
-                        }
                     }
                 }
                 @media (min-width:$desktop) {
@@ -834,20 +803,14 @@
                 left: 30%;    
                 cursor: pointer;
 
-                .svg{                    
-
-                    path{
-                        fill: #d4d4d4;
-                        transition: fill 0.3s ease;
-                    }
+                .svg{                                        
+                    fill: #d4d4d4;
+                    transition: fill 0.3s ease;                
                 }
 
                 &:hover{
-                    .svg{
-
-                        path{
-                            fill: #cab79f;
-                        }
+                    .svg{                     
+                        fill: #cab79f;                        
                     }
                 }
                 @media (min-width:$desktop) {
@@ -856,7 +819,7 @@
             }
 
             .item{      
-                max-width: 360px;  
+                max-width: initial;  
                 position: relative; 
                                
                 img{
@@ -967,7 +930,7 @@
                     }
 
                     &.under-slider{
-                        margin-top: -3px;
+                        margin-top: -4px;
                     }
                 }         
                 .date{
@@ -1049,6 +1012,15 @@
                             }
                         }
                     }
+                }
+                @media(min-width: 768px) and (max-width:$desktop) {
+                    max-width: 360px;
+                }
+                @media(min-width: $desktop) and (max-width:1440px) {
+                    max-width: 320px;
+                }
+                @media (min-width:1440px) {
+                    max-width: 360px;
                 }
             }
         }
