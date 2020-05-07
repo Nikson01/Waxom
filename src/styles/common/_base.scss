@@ -108,8 +108,15 @@ h5{
   width: 100%;
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  box-shadow: 0px 3px 0px #736357;
+  font-weight: 800;  
+  border-bottom: 3px solid #736357;
   margin-bottom: 5px;
-  border-radius: 3px;    
+  border-radius: 3px;   
+  transition: background-color 0.3s ease, border-color 0.3s ease; 
+
+  &:hover{
+    background-color: #c7b299;
+    border-color: #a48d72;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
 }

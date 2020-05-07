@@ -1,17 +1,31 @@
 $(document).ready(function () {
 
-  new WOW().init();
+  // onclick burger mobile function
+  $(".nav-tools__burger").on("click", function () {
+    $(".nav-tools__burger").toggleClass("nav-tools__burger-open");
+    $(".header_nav-bar").toggleClass("burger-menu-click");
 
-  $(".nav-tools__search").on("click", function () {
-    $(".nav-tools__search-block_click").toggleClass("nav-tools__search-block_click-show");
-    $(".nav-tools__search").toggleClass("nav-tools-close"); // $('.header').toggleClass('header-onclick-search_and_burg');
-
-    if ($(".nav-tools__search-block_click-show")) {
-      $(".nav-tools__burger").removeClass("nav-tools__burger-open");
-      $(".burger-menu__block").removeClass("burger-menu__block-show");
+    if ($(".burger-menu__block-show")) {
+      $(".nav-tools__search-block_click").removeClass("nav-tools__search-block_click-show");
+      $(".nav-tools__search").removeClass("nav-tools-close");
     }
   });
+  // End
 
+
+// Number counter animation
+  $(".num").counterUp({delat:10, time: 1000});
+// End of Number counter
+
+// Onclick search button in header function
+  $(".nav-tools__search").on("click", function () {
+    $(".nav-tools__search-block_click").toggleClass("nav-tools__search-block_click-show");
+    $(".nav-tools__search").toggleClass("nav-tools-close"); 
+  });
+
+
+
+  // Styles for slick sliders
 
   $('.single-item').slick({
 		infinite: true,
@@ -27,7 +41,33 @@ $(document).ready(function () {
     nextArrow: '<span class="next-slick"><img src="../images/right-arrow-bot-slick.svg" class="svg next-slick" alt="1"></span>',
     prevArrow: '<span class="prev-slick"><img src="../images/left-arrow-bot-slick.svg" class="svg prev-slick" alt="1"></span>',
     dots: false,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,        
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
 
   $('.item-inside__top').slick({
@@ -38,6 +78,8 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 1000,
   });
+
+  // End of styles for Slick sliders
 
 
     /*
